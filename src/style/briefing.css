@@ -1,0 +1,138 @@
+style.css
+
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.gradient {
+  background-image: linear-gradient(
+    to left top,
+    #9186b5,
+    #8c83af,
+    #8681a8,
+    #827ea2,
+    #7d7b9b,
+    #737193,
+    #68678a,
+    #5e5d82,
+    #4c4b76,
+    #39396a,
+    #26275d,
+    #101751
+  );
+}
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.box{
+	display: flex;
+	width: 930px;
+}
+.img-box{
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 50%;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+	border-radius: 20px 0 0 20px;
+}
+.img-box img{
+	width: 100%;
+}
+.form-box{
+	background-color: rgba(255, 255, 255, 0.4);
+	backdrop-filter: blur(40px);
+	padding: 30px 40px;
+	width: 50%;
+	border-radius: 0 20px 20px 0;
+	max-height: 70vh;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+.form-box::-webkit-scrollbar-thumb{
+	background: transparent;
+	border-radius: 10px;
+	height: 50%;
+}
+.form-box::-webkit-scrollbar{
+	width: 12px;
+}
+.form-box form{
+	margin: 20px 0;
+}
+form .input-group{
+	margin-bottom: 15px;
+}
+form .input-group label{
+	color: #3D3D3D;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+form .input-group input{
+	width: 100%;
+	height: 8px;
+	background-color: rgba(255, 255, 255, 0.32);
+	border-radius: 5px;
+	outline: none;
+	border: 2px solid transparent;
+	padding: 8px;
+	font-size: 15px;
+	color: #616161;
+	transition: all 0.4s ease;
+
+}
+form .input-group input:focus{
+	animation: piscar 2.5s infinite;
+}
+form .input-group button{
+	width: 100%;
+	height: 40px;
+	border-radius: 20px;
+	outline: none;
+	border: none;
+	margin-top: 15px;
+	color: white;
+	font-size: 16px;
+	opacity: 50%;
+	transition: opacity .5s linear;
+}
+form .input-group button:hover{
+	opacity: 100%;
+	cursor: pointer;
+}
+
+@keyframes piscar{
+	0%{
+		border-color: #9186b5
+	}
+	50%{
+		border-color: transparent;
+	}
+	100%{
+		border-color: #9186b5;
+	}
+}
+
+@media (max-width:930px){
+	.img-box{
+		display: none;
+	}
+	.box{
+		width: 700px;
+	}
+	.form-box{
+		width: 100%;
+		border-radius: 20px;
+	}
+}
